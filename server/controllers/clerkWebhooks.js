@@ -19,12 +19,12 @@ const clerkWebhookes = async (req, res) => {
     // Getting Data from request body
     const { data, type } = req.body;
 
-    const userData = {
-      _id: data.id,
-      eamil: data.email_addresses[0].email_address,
-      username: data.first_name + " " + data.last_name,
-      image: data.image_url,
-    };
+const userData = {
+  _id: data.id,
+  email: data.email_addresses[0].email_address,
+  username: data.first_name + " " + data.last_name,
+  image: data.image_url,
+};
 
     // Switch Case for different Events
     switch (type) {
